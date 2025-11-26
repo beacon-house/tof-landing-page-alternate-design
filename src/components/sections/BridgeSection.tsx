@@ -43,13 +43,13 @@ const benefits = [
 
 export const BridgeSection: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick }) => {
   return (
-    <Section id="bridge" className="relative py-12 md:py-16 flex items-center bg-white">
+    <Section id="bridge" className="relative py-10 md:py-12 flex items-center bg-white">
       <div className="w-full">
         {/* Header */}
-        <div className="text-center mb-8 md:mb-12 max-w-3xl mx-auto">
+        <div className="text-center mb-5 md:mb-7 max-w-3xl mx-auto">
 
 
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-navy mb-6 leading-tight font-bold">
+          <h2 className="font-serif text-xl md:text-2xl lg:text-3xl text-navy mb-4 leading-tight font-bold">
             Here's exactly how we guide you:
           </h2>
 
@@ -58,14 +58,14 @@ export const BridgeSection: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick
 
         {/* Benefits - Mobile: Horizontal Carousel, Desktop: Grid */}
         {/* Mobile Carousel */}
-        <div className="md:hidden mb-12">
+        <div className="md:hidden mb-8">
           <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-6 px-6 scrollbar-hide">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[85%] snap-start group p-5 bg-gradient-to-br from-cream to-sage rounded-2xl border border-gold/10 shadow-sm"
+                className="flex-shrink-0 w-[85%] snap-start group p-4 bg-gradient-to-br from-cream to-sage rounded-2xl border border-gold/10 shadow-sm"
               >
-                <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-2xl mb-3 group-hover:scale-110 transition-transform duration-300">
                   {benefit.icon}
                 </div>
                 <h3 className="text-base font-bold text-navy mb-2 leading-snug">
@@ -86,20 +86,20 @@ export const BridgeSection: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick
         </div>
 
         {/* Desktop Grid/Flex for better centering of 7 items */}
-        <div className="hidden md:flex flex-wrap justify-center gap-4 md:gap-5 mb-12 md:mb-16">
+        <div className="hidden md:flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-10">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group p-5 md:p-6 bg-gradient-to-br from-cream to-sage rounded-2xl border border-gold/10 shadow-sm hover:shadow-luxury transition-all duration-300 hover:-translate-y-1 w-[calc(50%-10px)] lg:w-[calc(25%-15px)] flex flex-col"
+              className="group p-4 md:p-5 bg-gradient-to-br from-cream to-sage rounded-2xl border border-gold/10 shadow-sm hover:shadow-luxury transition-all duration-300 hover:-translate-y-1 w-[calc(50%-10px)] lg:w-[calc(25%-15px)] flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-3xl md:text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-2xl md:text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
                 {benefit.icon}
               </div>
-              <h3 className="text-base md:text-lg font-bold text-navy mb-2 leading-snug">
+              <h3 className="text-sm md:text-base font-bold text-navy mb-2 leading-snug">
                 {benefit.title}
               </h3>
-              <p className="text-sm md:text-base text-navy/70 leading-relaxed mt-auto">
+              <p className="text-xs md:text-sm text-navy/70 leading-relaxed mt-auto">
                 {benefit.description}
               </p>
             </div>
@@ -107,8 +107,8 @@ export const BridgeSection: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick
         </div>
 
         {/* CTA Section */}
-        <div className="text-center max-w-2xl mx-auto p-8 md:p-10 bg-gradient-to-br from-navy via-navyLight to-navy rounded-3xl shadow-luxury">
-          <p className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-white mb-6 md:mb-8 leading-tight">
+        <div className="text-center max-w-2xl mx-auto p-6 md:p-7 bg-gradient-to-br from-navy via-navyLight to-navy rounded-3xl shadow-luxury">
+          <p className="text-xl md:text-2xl lg:text-3xl font-serif font-bold text-white mb-4 md:mb-5 leading-tight">
             This is where <span className="cursive-keyword">clarity</span> begins.
           </p>
 

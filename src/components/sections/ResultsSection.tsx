@@ -61,18 +61,18 @@ export const ResultsSection: React.FC = () => {
 
 
       {/* Main Heading - Using proper serif font like other sections */}
-      <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-navy mb-6 md:mb-8 leading-relaxed text-center font-medium">
+      <p className="font-serif text-xl md:text-2xl lg:text-3xl text-navy mb-4 md:mb-5 leading-relaxed text-center font-medium">
         When clarity and effort come together, great outcomes follow naturally.
       </p>
 
       {/* Stats Section - Right after heading */}
-      <div className="w-full overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0 md:pb-0 scrollbar-hide md:overflow-visible mb-8 md:mb-10">
-        <div className="flex md:grid md:grid-cols-4 gap-4 md:gap-5 w-max md:w-full">
+      <div className="w-full overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0 md:pb-0 scrollbar-hide md:overflow-visible mb-5 md:mb-6">
+        <div className="flex md:grid md:grid-cols-4 gap-3 md:gap-4 w-max md:w-full">
           {stats.map((stat, index) => (
-            <div key={index} className="flex-shrink-0 w-[160px] md:w-auto snap-start text-center p-4 md:p-5 bg-gradient-to-br from-cream to-sage rounded-2xl border border-gold/10 shadow-sm hover:shadow-luxury transition-all duration-300 hover:-translate-y-1">
+            <div key={index} className="flex-shrink-0 w-[160px] md:w-auto snap-start text-center p-3 md:p-4 bg-gradient-to-br from-cream to-sage rounded-2xl border border-gold/10 shadow-sm hover:shadow-luxury transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-center justify-center gap-1 mb-2">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full"></div>
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gold to-goldLight bg-clip-text text-transparent">
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-gold to-goldLight bg-clip-text text-transparent">
                   {stat.number}
                 </div>
               </div>
@@ -85,12 +85,12 @@ export const ResultsSection: React.FC = () => {
       </div>
 
       {/* Comparison Cards - After stats */}
-      <div className="w-full overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0 md:pb-0 scrollbar-hide md:overflow-visible mb-8 md:mb-10">
-        <div className="flex md:grid md:grid-cols-4 gap-3 md:gap-4 w-max md:w-full">
+      <div className="w-full overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0 md:pb-0 scrollbar-hide md:overflow-visible mb-5 md:mb-6">
+        <div className="flex md:grid md:grid-cols-4 gap-2 md:gap-3 w-max md:w-full">
           {comparisonData.map((item, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[240px] md:w-auto snap-start bg-white border border-gold/10 rounded-2xl p-4 md:p-5 shadow-sm hover:shadow-luxury transition-all duration-300 hover:-translate-y-1"
+              className="flex-shrink-0 w-[240px] md:w-auto snap-start bg-white border border-gold/10 rounded-2xl p-3 md:p-4 shadow-sm hover:shadow-luxury transition-all duration-300 hover:-translate-y-1"
             >
               {/* University Name */}
               <h3 className="text-sm md:text-base font-bold text-navy mb-2 md:mb-3">
@@ -141,8 +141,8 @@ export const ResultsSection: React.FC = () => {
       </div>
 
       {/* Cursive Closing Line */}
-      <div className="text-center mb-6 md:mb-8">
-        <p className="text-2xl md:text-3xl lg:text-4xl text-navy font-serif font-medium">
+      <div className="text-center mb-4 md:mb-5">
+        <p className="text-xl md:text-2xl lg:text-3xl text-navy font-serif font-medium">
           <span className="cursive-keyword">Clarity</span> → Direction → Outcomes.
         </p>
       </div>
@@ -153,7 +153,7 @@ export const ResultsSection: React.FC = () => {
       {/* University Logos - Marquee at the bottom */}
       <div className="overflow-hidden relative">
         <div
-          className="flex space-x-4 md:space-x-6"
+          className="flex space-x-3 md:space-x-4"
           style={{
             animation: 'marquee 60s linear infinite',
             width: 'max-content'
@@ -162,7 +162,7 @@ export const ResultsSection: React.FC = () => {
           {[...universities, ...universities, ...universities].map((university, index) => (
             <div
               key={`${university.name}-${index}`}
-              className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-cream rounded-xl flex items-center justify-center p-2 transition-all duration-300 grayscale hover:grayscale-0 hover:shadow-sm border border-gold/5"
+              className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-cream rounded-xl flex items-center justify-center p-2 transition-all duration-300 grayscale hover:grayscale-0 hover:shadow-sm border border-gold/5"
             >
               <img
                 src={`/uni-logos/${university.file}`}

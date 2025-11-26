@@ -1,9 +1,8 @@
-// Section A - Hero section with Learn More CTA
+// Section A - Hero section
 import React from 'react'
-import { Button } from '../Button'
 import { StatPill } from '../StatPill'
 
-export const HeroSection: React.FC<{ onLearnMore: () => void }> = ({ onLearnMore }) => {
+export const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-cream pt-20 overflow-hidden">
       {/* Animated background gradient rays */}
@@ -43,17 +42,6 @@ export const HeroSection: React.FC<{ onLearnMore: () => void }> = ({ onLearnMore
             For most students, the real challenge isn't marks —<br className="hidden sm:inline" />
             it's not having <span className="cursive-keyword">clarity</span> on the path.
           </p>
-
-          {/* CTA Button with glow effect */}
-          <div className="opacity-0 animate-fade-in-up-delay-2 mb-8 md:mb-10 flex justify-center">
-            <Button
-              onClick={onLearnMore}
-              variant="primary"
-              className="min-w-[220px] shadow-glow hover:shadow-luxury transition-all duration-300 hover:scale-105 text-base md:text-lg font-semibold flex items-center justify-center"
-            >
-              Request an Evaluation
-            </Button>
-          </div>
 
           {/* Trust badges with enhanced styling */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 text-xs md:text-sm font-medium text-navy/80 opacity-0 animate-fade-in-up-delay-2 mb-8 md:mb-10">

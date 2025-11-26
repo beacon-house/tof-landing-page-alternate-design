@@ -26,7 +26,7 @@ function App() {
       <Header onCTAClick={handleRequestEvaluation} />
 
       <main>
-        <HeroSection onLearnMore={handleRequestEvaluation} />
+        <HeroSection />
         <PainPointSection />
         <AuthoritySection />
         <BridgeSection />

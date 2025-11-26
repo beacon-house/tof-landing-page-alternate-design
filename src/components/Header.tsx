@@ -41,36 +41,50 @@ export const Header: React.FC<HeaderProps> = ({ onCTAClick }) => {
             <img
               src="/bh-ig-logo.png"
               alt="Beacon House"
-              className="h-8 md:h-12 w-auto hover:scale-105 transition-transform duration-300"
+              className="h-7 md:h-10 w-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <button
-              onClick={() => scrollToSection('about')}
-              className="text-navy hover:text-gold transition-colors font-semibold relative group"
+              onClick={() => scrollToSection('pain-point')}
+              className="text-navy hover:text-gold transition-colors font-medium text-sm relative group"
             >
-              About
+              The Challenge
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
-              onClick={() => scrollToSection('process')}
-              className="text-navy hover:text-gold transition-colors font-semibold relative group"
+              onClick={() => scrollToSection('about')}
+              className="text-navy hover:text-gold transition-colors font-medium text-sm relative group"
             >
-              Process
+              About Us
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => scrollToSection('results')}
-              className="text-navy hover:text-gold transition-colors font-semibold relative group"
+              className="text-navy hover:text-gold transition-colors font-medium text-sm relative group"
             >
               Results
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
+            </button>
+            <button
+              onClick={() => scrollToSection('process')}
+              className="text-navy hover:text-gold transition-colors font-medium text-sm relative group"
+            >
+              Our Process
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-navy hover:text-gold transition-colors font-medium text-sm relative group"
+            >
+              Contact
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
             </button>
             {showCTA && (
               <button
                 onClick={onCTAClick}
-                className="bg-gradient-to-r from-gold to-goldLight text-navy px-6 py-2.5 rounded-xl font-bold hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in"
+                className="bg-gradient-to-r from-gold to-goldLight text-navy px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in"
               >
                 Request an Evaluation
               </button>
@@ -105,22 +119,34 @@ export const Header: React.FC<HeaderProps> = ({ onCTAClick }) => {
         <div className="md:hidden fixed inset-0 top-16 bg-cream backdrop-blur-2xl bg-opacity-95 z-40 animate-fade-in">
           <nav className="px-6 py-8 space-y-4 h-full">
             <button
+              onClick={() => scrollToSection('pain-point')}
+              className="block w-full text-left py-4 px-4 text-navy text-xl font-semibold hover:text-gold hover:bg-gold/10 rounded-xl transition-all"
+            >
+              The Challenge
+            </button>
+            <button
               onClick={() => scrollToSection('about')}
               className="block w-full text-left py-4 px-4 text-navy text-xl font-semibold hover:text-gold hover:bg-gold/10 rounded-xl transition-all"
             >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection('process')}
-              className="block w-full text-left py-4 px-4 text-navy text-xl font-semibold hover:text-gold hover:bg-gold/10 rounded-xl transition-all"
-            >
-              Process
+              About Us
             </button>
             <button
               onClick={() => scrollToSection('results')}
               className="block w-full text-left py-4 px-4 text-navy text-xl font-semibold hover:text-gold hover:bg-gold/10 rounded-xl transition-all"
             >
               Results
+            </button>
+            <button
+              onClick={() => scrollToSection('process')}
+              className="block w-full text-left py-4 px-4 text-navy text-xl font-semibold hover:text-gold hover:bg-gold/10 rounded-xl transition-all"
+            >
+              Our Process
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="block w-full text-left py-4 px-4 text-navy text-xl font-semibold hover:text-gold hover:bg-gold/10 rounded-xl transition-all"
+            >
+              Contact
             </button>
           </nav>
         </div>

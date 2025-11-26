@@ -3,10 +3,10 @@ import React from 'react'
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-navy text-white">
+    <footer className="relative bg-cream border-t border-navy/10">
       <div className="max-w-content mx-auto px-6 py-4">
         <div className="flex justify-center">
-          <p className="text-xs text-white/60">
+          <p className="text-xs text-navy/60">
             © 2025. Beacon House.
           </p>
         </div>

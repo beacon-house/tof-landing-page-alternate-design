@@ -3,9 +3,9 @@ import React from 'react'
 
 export const StatPill: React.FC = () => {
   return (
-    <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-gold/20 via-goldLight/20 to-gold/20 border border-gold/30 shadow-sm hover:shadow-glow transition-all duration-300 whitespace-nowrap group">
+    <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-gold/20 via-goldLight/20 to-gold/20 border border-gold/30 shadow-sm hover:shadow-glow transition-all duration-300 whitespace-nowrap group">
       <div className="w-2 h-2 bg-gold rounded-full animate-glow-pulse"></div>
-      <span className="text-navy font-bold text-sm md:text-base whitespace-nowrap group-hover:text-gold transition-colors duration-300">
+      <span className="text-navy font-semibold text-sm md:text-base whitespace-nowrap group-hover:text-gold transition-colors duration-300">
         120+ Ivy League Admits in 2024
       </span>
       <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">

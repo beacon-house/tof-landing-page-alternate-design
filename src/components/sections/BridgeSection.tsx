@@ -1,7 +1,6 @@
 // Section D - What We Help Families Do section
 import React from 'react'
 import { Section } from '../Section'
-import { Button } from '../Button'
 
 const benefits = [
   {
@@ -41,7 +40,7 @@ const benefits = [
   }
 ]
 
-export const BridgeSection: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick }) => {
+export const BridgeSection: React.FC = () => {
   return (
     <Section id="bridge" className="relative py-10 md:py-12 flex items-center bg-white">
       <div className="w-full">
@@ -77,19 +76,11 @@ export const BridgeSection: React.FC<{ onCTAClick: () => void }> = ({ onCTAClick
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* Closing Statement */}
         <div className="text-center max-w-2xl mx-auto p-6 md:p-7 bg-gradient-to-br from-navy via-navyLight to-navy rounded-3xl shadow-luxury">
-          <p className="text-base md:text-2xl lg:text-3xl font-serif font-bold text-white mb-4 md:mb-5 leading-tight">
+          <p className="text-base md:text-2xl lg:text-3xl font-serif font-bold text-white leading-tight">
             This is where <span className="cursive-keyword">clarity</span> begins.
           </p>
-
-          <Button
-            onClick={onCTAClick}
-            variant="secondary"
-            className="bg-gold hover:bg-goldLight text-navy font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 rounded-xl shadow-glow hover:shadow-luxury transition-all duration-300 hover:scale-105"
-          >
-            Understand Our Approach
-          </Button>
         </div>
       </div>
     </Section>

@@ -25,12 +25,8 @@ export const HeroSection: React.FC<{ onLearnMore: () => void }> = ({ onLearnMore
         ></div>
       </div>
 
-      {/* Floating decorative elements */}
-      <div className="absolute top-20 left-[10%] w-2 h-2 bg-gold/30 rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
-      <div className="absolute top-40 right-[15%] w-3 h-3 bg-gold/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-32 left-[20%] w-2 h-2 bg-navy/20 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
 
-      <div className="relative z-10 max-w-content mx-auto px-6 md:px-8 lg:px-12 py-8 md:py-10">
+      <div className="relative z-10 max-w-content mx-auto px-6 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16">
         <div className="max-w-text mx-auto text-center">
           {/* Stat pill with animation */}
           <div className="flex flex-col items-center justify-center gap-2 mb-4 md:mb-6 opacity-0 animate-fade-in-up">
@@ -49,13 +45,13 @@ export const HeroSection: React.FC<{ onLearnMore: () => void }> = ({ onLearnMore
           </p>
 
           {/* CTA Button with glow effect */}
-          <div className="opacity-0 animate-fade-in-up-delay-2 mb-5 md:mb-6">
+          <div className="opacity-0 animate-fade-in-up-delay-2 mb-5 md:mb-6 flex justify-center">
             <Button
               onClick={onLearnMore}
               variant="primary"
-              className="min-w-[220px] shadow-glow hover:shadow-luxury transition-all duration-300 hover:scale-105 text-base md:text-lg py-4 md:py-5 px-8 md:px-10 font-semibold"
+              className="min-w-[220px] shadow-glow hover:shadow-luxury transition-all duration-300 hover:scale-105 text-base md:text-lg font-semibold flex items-center justify-center"
             >
-              Learn More
+              Request an Evaluation
             </Button>
           </div>
 
@@ -73,7 +69,7 @@ export const HeroSection: React.FC<{ onLearnMore: () => void }> = ({ onLearnMore
             <span className="hidden sm:inline text-gold/40">•</span>
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 bg-gold rounded-full"></div>
-              <span className="font-semibold text-navy">Founder Led Guidance</span>
+              <span>Founder Led Guidance</span>
             </div>
           </div>
 

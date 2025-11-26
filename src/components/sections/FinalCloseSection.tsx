@@ -3,11 +3,10 @@ import { Section } from '../Section'
 import { Button } from '../Button'
 
 interface FinalCloseSectionProps {
-  onPrimaryCTA: () => void
-  onSecondaryCTA: () => void
+  onCTA: () => void
 }
 
-export const FinalCloseSection: React.FC<FinalCloseSectionProps> = ({ onPrimaryCTA, onSecondaryCTA }) => {
+export const FinalCloseSection: React.FC<FinalCloseSectionProps> = ({ onCTA }) => {
   return (
     <Section id="contact" className="relative py-20 md:py-28 bg-white overflow-hidden">
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
@@ -21,13 +20,10 @@ export const FinalCloseSection: React.FC<FinalCloseSectionProps> = ({ onPrimaryC
           Your journey to confident, purposeful admissions begins here.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button onClick={onPrimaryCTA} variant="primary">
-            Book a Discovery Call
-          </Button>
-          <Button onClick={onSecondaryCTA} variant="secondary">
-            Request Free Evaluation
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <Button onClick={onCTA} variant="primary">
+            Request an Evaluation
           </Button>
         </div>
       </div>

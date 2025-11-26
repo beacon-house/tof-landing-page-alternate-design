@@ -16,59 +16,35 @@ import { LeadCaptureModal } from './components/LeadCaptureModal'
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [modalType, setModalType] = useState<'call' | 'evaluation'>('call')
-
-  const handleLearnMore = () => {
-    const painPointSection = document.getElementById('pain-point')
-    if (painPointSection) {
-      painPointSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
-  const handleUnderstandApproach = () => {
-    const aboutSection = document.getElementById('about')
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
-  const handleBookCall = () => {
-    setModalType('call')
-    setIsModalOpen(true)
-  }
 
   const handleRequestEvaluation = () => {
-    setModalType('evaluation')
     setIsModalOpen(true)
   }
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <Header />
+      <Header onCTAClick={handleRequestEvaluation} />
 
       <main>
-        <HeroSection onLearnMore={handleLearnMore} />
+        <HeroSection onLearnMore={handleRequestEvaluation} />
         <PainPointSection />
         <AuthoritySection />
-        <BridgeSection onCTAClick={handleUnderstandApproach} />
+        <BridgeSection />
         <WhoWeAreSection />
         <ResultsSection />
         <ProcessSection />
         <TrustSection />
-        <FinalCloseSection
-          onPrimaryCTA={handleBookCall}
-          onSecondaryCTA={handleRequestEvaluation}
-        />
+        <FinalCloseSection onCTA={handleRequestEvaluation} />
       </main>
 
       <Footer />
 
-      <StickyMobileCTA onClick={handleBookCall} />
+      <StickyMobileCTA onClick={handleRequestEvaluation} />
 
       <LeadCaptureModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        type={modalType}
+        type="evaluation"
       />
     </div>
   )

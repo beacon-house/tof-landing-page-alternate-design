@@ -1,13 +1,20 @@
 // Sticky header with minimal clean design
 import React, { useState, useEffect } from 'react'
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onCTAClick: () => void
+}
+
+export const Header: React.FC<HeaderProps> = ({ onCTAClick }) => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [showCTA, setShowCTA] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+      // Show CTA after scrolling past hero section (one viewport height)
+      setShowCTA(window.scrollY > window.innerHeight * 0.8)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -60,12 +67,14 @@ export const Header: React.FC = () => {
               Results
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-gold to-goldLight text-navy px-6 py-2.5 rounded-xl font-bold hover:shadow-glow transition-all duration-300 hover:scale-105"
-            >
-              Contact
-            </button>
+            {showCTA && (
+              <button
+                onClick={onCTAClick}
+                className="bg-gradient-to-r from-gold to-goldLight text-navy px-6 py-2.5 rounded-xl font-bold hover:shadow-glow transition-all duration-300 hover:scale-105 animate-fade-in"
+              >
+                Request an Evaluation
+              </button>
+            )}
           </nav>
 
           <button
@@ -112,12 +121,6 @@ export const Header: React.FC = () => {
               className="block w-full text-left py-4 px-4 text-navy text-xl font-semibold hover:text-gold hover:bg-gold/10 rounded-xl transition-all"
             >
               Results
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="block w-full text-left py-4 px-4 text-navy text-xl font-semibold hover:text-gold hover:bg-gold/10 rounded-xl transition-all"
-            >
-              Contact
             </button>
           </nav>
         </div>

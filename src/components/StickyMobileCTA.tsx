@@ -32,7 +32,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({ onClick }) => 
 
           {/* Button content */}
           <span className="relative flex items-center justify-center gap-2">
-            Book a Strategy Call
+            Request an Evaluation
             {/* Arrow icon that slides on hover */}
             <svg
               className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
